@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Form Example</title>
+    <meta name="description" content="An enhanced HTML form example with lists, tables, and media elements.">
+    <link rel="stylesheet" href="style/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <h1>Event Registration Form</h1>
+    <p>Welcome! Please fill in the form below to register for our annual community event.</p>
+</header>
+
+<main>
+    <section>
+        <h2>Event Highlights</h2>
+        <ul>
+            <li>Networking opportunities with industry experts</li>
+            <li>Workshops on professional skills</li>
+            <li>Fun games and entertainment</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Event Schedule</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Activity</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>9:00 AM</td>
+                    <td>Opening Ceremony</td>
+                    <td>Main Hall</td>
+                </tr>
+                <tr>
+                    <td>10:00 AM</td>
+                    <td>Workshop: Career Growth</td>
+                    <td>Room A</td>
+                </tr>
+                <tr>
+                    <td>1:00 PM</td>
+                    <td>Networking Lunch</td>
+                    <td>Cafeteria</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Event Preview</h2>
+        
+    </section>
+
+    <section>
+        <h2>Registration Form</h2>
+        <form action="submit.php" method="POST" autocomplete="on">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="John Doe" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="e.g. +234-700-000-0000" required pattern="\+?[0-9\- ]+">
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Event Preferences</legend>
+                <label for="session">Select Workshop Session:</label>
+                <select id="session" name="session" required>
+                    <option value="" disabled selected>Select a session</option>
+                    <option value="career">Career Growth</option>
+                    <option value="tech">Technology Trends</option>
+                    <option value="networking">Networking Skills</option>
+                </select>
+
+                <label>Dietary Restrictions:</label>
+                <input type="checkbox" name="diet" value="vegetarian"> Vegetarian
+                <input type="checkbox" name="diet" value="vegan"> Vegan
+                <input type="checkbox" name="diet" value="gluten-free"> Gluten-Free
+
+                <label>Preferred Contact Method:</label>
+                <input type="radio" name="contact" value="email" required> Email
+                <input type="radio" name="contact" value="phone"> Phone
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Information</legend>
+                <label for="comments">Comments or Special Requests:</label>
+                <textarea id="comments" name="comments" placeholder="Let us know if you have any special needs..." rows="4"></textarea>
+
+                <label for="referral">Referred By:</label>
+                <input type="text" id="referral" name="referral" value="Website" readonly>
+            </fieldset>
+
+            <button type="submit">Submit Registration</button>
+            <button type="reset">Clear Form</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Community Event. All rights reserved.</p>
+</footer>
+</body>
+</html>
